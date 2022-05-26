@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API_BANCO
 {
-    public abstract class Conta
+    public abstract class Conta : IConta
     {
         public long Numero { get; set; }
         public string Correntista { get; set; }
