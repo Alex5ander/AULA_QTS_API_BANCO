@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conta.cs" />
+    <Compile Include="ContaCorrente.cs" />
     <Compile Include="ContaPoupanca.cs" />
     <Compile Include="IConta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

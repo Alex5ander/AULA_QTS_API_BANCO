@@ -15,6 +15,7 @@ namespace TESTE_BANCO
             for (int i = 0; i < 10; i++)
             {
                 ContasBancarias.Add(new ContaPoupanca(10, "Correntista", 10));
+                ContasBancarias.Add(new ContaCorrente(10, "Correntista", 10, 20));
             }
             Saques();
             Depositos();
@@ -22,11 +23,19 @@ namespace TESTE_BANCO
         }
         private static void Saques()
         {
-            ContasBancarias.ForEach(e => e.Debitar(200));
+            ContasBancarias.ForEach(e =>
+            {
+                e.Imprimir();
+                e.Debitar(100);
+            });
         }
         private static void Depositos()
         {
-            ContasBancarias.ForEach(e => e.Creditar(100));
+            ContasBancarias.ForEach(e => 
+            {
+                e.Imprimir();
+                e.Creditar(100);
+            });
         }
     }
 }

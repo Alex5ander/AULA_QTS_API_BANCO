@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace API_BANCO
 {
-    public class ContaPoupanca : Conta
+    public class ContaCorrente : Conta
     {
-        public ContaPoupanca(long Numero, string Correntista, double Saldo) : base (Numero, Correntista, Saldo)
+        public double Limite { get; set; }
+        public ContaCorrente(long Numero, string Correntista, double Saldo, double Limite) : base (Numero, Correntista, Saldo) 
         {
-
+            this.Limite = Limite;
         }
+
         public override void Debitar(double valor)
         {
-            if(valor > this.Saldo) {
+            double disponivel = this.Saldo + this.Limite;
+            if (valor > disponivel)
+            {
                 Console.WriteLine("Saldo insuficiente");
             }
             else

@@ -10,5 +10,6 @@ namespace API_BANCO
     {
         void Creditar(double saldo);
         void Debitar(double saldo);
+        void Imprimir();
     }
 }

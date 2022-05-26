@@ -25,5 +25,11 @@ namespace API_BANCO
             Console.WriteLine("SALDO: {0:C2}", this.Saldo);
         }
         public abstract void Debitar(double valor);
+        public void Imprimir()
+        {
+            Console.WriteLine("TIPO: {0}", this.GetType());
+            Console.WriteLine("NUMERO: {0}", this.Numero);
+            Console.WriteLine("CORRENT: {0:C2}", this.Correntista);
+        }
     }
 }
