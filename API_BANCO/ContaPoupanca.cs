@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API_BANCO
 {
-    class ContaPoupanca : Conta
+    public class ContaPoupanca : Conta
     {
         public ContaPoupanca(long Numero, string Correntista, double Saldo) : base (Numero, Correntista, Saldo)
         {
