@@ -24,6 +24,6 @@ namespace API_BANCO
             Console.WriteLine("CREDITO: {0:C2}", valor);
             Console.WriteLine("SALDO: {0:C2}", this.Saldo);
         }
-        public abstract void Debitar(string valor);
+        public abstract void Debitar(double valor);
     }
 }
